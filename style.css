@@ -1,0 +1,413 @@
+body{
+    margin: 0;
+
+    font-family: "Raleway", sans-serif;
+    font-size: 14px;
+    color: #6c7279;
+    background-color: #fff;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1{
+    color: red;
+}
+
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+p {
+    margin: 0 0 10px;
+}
+
+
+/* Container
+=================================================== */
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    padding: 0 15px;
+}
+
+
+/* Header
+=================================================== */
+
+.header {
+    height: 100px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+.header__inner {
+    display: flex;
+    padding: 35px 0;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #505369;
+}
+
+
+
+/* Nav
+=================================================== */
+
+.nav {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: flex;
+
+}
+
+.nav__link {
+    color: #fff;
+    text-decoration: none;
+    opacity: 0.75;
+    margin-left: 50px;
+    transition: opacity .2s linear;
+
+}
+
+
+.nav__link:hover {
+    opacity: 1;
+
+}
+
+.nav__link:first-child {
+    margin-left: 0;
+}
+
+
+
+/* Intro
+=================================================== */
+
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 750px;
+    padding-top: 100px;
+
+    background: #30334d url("img/intro-bg.jpg") center no-repeat;
+    background-size: cover;
+}
+
+.intro__inner {
+    width: 100%;
+    max-width: 970px;
+    margin: 0 auto;
+    text-align: center;
+
+}
+
+.intro__title {
+    margin: 0 0 30px 0;
+
+    font-family: "Open Sans", sans-serif;
+    font-size: 65px;
+    line-height: 1.1;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.intro__subtitle {
+    font-size: 22px;
+    color: #fff;
+    line-height: 1.5;
+    font-weight: 400;
+    margin-bottom: 60px;
+}
+
+
+/* Button
+=================================================== */
+.btn {
+    display: inline-block;
+    vertical-align: top;
+
+    border-radius: 2px;
+    border: 0;
+    cursor: pointer;
+
+    font-family: "Raleway", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+    transition: background .1s linear;
+
+    text-align: center;
+
+}
+
+.btn--red {
+    background-color: #e84545;
+    padding: 14px 40px;
+}
+
+.btn--red:hover {
+    background-color: #9d0f0f;
+}
+
+.btn--long {
+    min-width: 280px;
+}
+
+
+/* Features
+=================================================== */
+.features {
+    display: flex;
+    margin: 95px 0;
+    flex-wrap: wrap;
+
+}
+
+.features__item {
+    width: 33.33333%;
+    text-align: center;
+    padding: 0 40px;
+    margin: 25px 0;
+}
+
+.features__icon {
+    margin-bottom: 25px;
+}
+
+.features__title {
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: 2d3033;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.features__text{
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/*Works*/
+.works {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.works__item {
+    width: 25%;
+    height: 350px;
+    position: relative;
+    overflow: hidden;
+
+    border-bottom: 1px solid #fff;
+    border-right: 1px solid #fff;
+}
+
+.works__item:hover .works__content {
+    opacity: 1;
+}
+
+.works__photo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    transform: translate3d(-50%, -50%, 0);
+}
+
+.works__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(232, 80, 80, .9);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    opacity: 0;
+
+    transition: opacity .2s linear;
+}
+
+.works__title {
+    margin-bottom: 5px;
+    font-family: "Raleway", sans-serif;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.works__text {
+    font-family: "Raleway", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+}
+
+
+/* Team
+=================================================== */
+.team {
+    margin: 100px 0 70px;
+}
+
+.team__inner {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.team__item {
+    width: 25%;
+    padding: 0 15px;
+    margin-bottom: 30px;
+}
+
+.team__photo {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.team__name {
+    font-weight: 400;
+    font-size: 22px;
+    color: #2d3033;
+    margin-bottom: 8px;
+}
+
+.team__prof {
+    color: #e84545;
+    font-size: 13px;
+    font-weight: 400;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.team__text {
+    color: #6c7279;
+    line-height: 1.5;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/* reviews
+=================================================== */
+
+.reviews {
+    overflow: hidden;
+    background-color: #53354a;
+}
+
+.reviews__inner {
+    display: flex;
+}
+
+.reviews__photo {
+    width: 50%;
+    height: 500px;
+    position: relative;
+}
+
+.reviews__content {
+    width: 50%;
+}
+
+.reviews__img {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    z-index: 1;
+
+    transform: translateY(-50%);
+}
+
+.reviews__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 80px;
+}
+
+.reviews__text {
+    font-family: "Cardo", sans-serif;
+    font-style: italic;
+    font-size: 36px;
+    color: #fff;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.reviews__author {
+    font-weight: 800;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+/* Download
+=================================================== */
+.download {
+    display: flex;
+    text-align: center;
+
+    margin: 90px 0;
+}
+
+.download__title {
+    font-weight: 300;
+    color: #2d3033;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.download__text {
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #2d3033;
+    margin-bottom: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
